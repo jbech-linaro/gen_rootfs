@@ -1,6 +1,6 @@
 export PATH="/usr/bin:/usr/sbin:/bin:/sbin"
 
-PS1="\\u@\\h:\\w "
+PS1="\\u@\\h:\\w\n$ "
 PS2=" >"
 PS4="+ "
 
@@ -16,3 +16,5 @@ fi
 
 alias ll='ls -al'
 alias mount_shared='mount -t 9p -o trans=virtio host'
+# Just for convenience and save a few keystrokes ...
+alias setup_hotp='mkdir -p /host && mount -t 9p -o trans=virtio host /host && cd /lib/optee_armtz && ln -sf /host/optee_examples/hotp/ta/484d4143-2d53-4841-3120-62617365642e.ta 484d4143-2d53-4841-3120-62617365642e.ta && cd /usr/bin && ln -sf /host/optee_examples/hotp/host/hotp hotp'
