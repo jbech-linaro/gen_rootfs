@@ -18,3 +18,4 @@ alias ll='ls -al'
 alias mount_shared='mount -t 9p -o trans=virtio host'
 # Just for convenience and save a few keystrokes ...
 alias setup_hotp='mkdir -p /host && mount -t 9p -o trans=virtio host /host && cd /lib/optee_armtz && ln -sf /host/optee_examples/hotp/ta/484d4143-2d53-4841-3120-62617365642e.ta 484d4143-2d53-4841-3120-62617365642e.ta && cd /usr/bin && ln -sf /host/optee_examples/hotp/host/hotp hotp'
+alias sta='mkdir -p /host && mount -t 9p -o trans=virtio host /host && cd /lib/optee_armtz && ln -sf /host/template_ta/ta/out/11111111-2222-3333-445566778899aabb.ta 11111111-2222-3333-445566778899aabb.ta && cd /usr/bin && ln -sf /host/template_ta/host/template_ta_host'
